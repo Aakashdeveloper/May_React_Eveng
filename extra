@@ -1,0 +1,70 @@
+JSON
+JavaScript Object Notation
+[
+    {
+        "name":"john",
+        "class":"AI"
+    },
+    {
+        "name":"bill",
+        "class":"React"
+    }
+]
+
+package.json
+node_module
+setup react
+
+/*********************************
+    Steps to create Package.json
+*********************************/
+Step1: Navigate to folder using command prompt
+Step2: npm init
+Step3: Answer all Questions
+        package name: (learnpackage) aboutpackage
+        version: (1.0.0) 
+        description: this is about package
+        entry point: (index.js) 
+        test command: 
+        git repository: 
+        keywords: react redux node
+        author: NareshIT
+        license: (ISC) 
+Step4: yes
+
+/*********************************
+    About Node_Modules
+*********************************/
+> Local dependency
+> Global dependency
+
+
+/************************************
+    Step to install Packages locally
+************************************/
+Step1: Navigate to folder using command prompt
+Step2: npm install @aakashdeveloper/create-node-app
+
+/************************************
+    Step to install Packages Globally
+************************************/
+Step1: Navigate to folder using command prompt
+In Window run cmd as admin
+Step2: npm install -g @aakashdeveloper/create-node-app
+For Mac and linux
+sudo npm install -g @aakashdeveloper/create-node-app
+
+Node_mdoules that help to start or create the app
+should install locally
+
+
+/************************************
+    Step to setup react
+************************************/
+Step1: Open command prompt
+Step2: npm install -g create-react-app
+Step3: Navigate to folder using command prompt
+Step4: create-react-app firstapp
+Step5: cd firstapp
+Step6: npm start
+Step7: http://localhost:3000
