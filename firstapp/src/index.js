@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Home from './home';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => {
+    return <div>
+                <h1>Hello to react</h1>
+                <h2>This is about frist app</h2>
+                <Home/>
+            </div>
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App/>,document.getElementById('root'))

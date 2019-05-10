@@ -68,3 +68,29 @@ Step4: create-react-app firstapp
 Step5: cd firstapp
 Step6: npm start
 Step7: http://localhost:3000
+
+
+/************************************
+    Component in react
+************************************/
+Functional           |         ClassBased 
+-------------------------------------------------------------
+Light in weight      |         Heavy as compare to Functional
+cannot handle state  |         Can handle state
+Presentational       |         More logical 
+
+
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => { return a+b}
+
+add(1,2)
+
+---------------------------------
+import
+
+logical
+
+export
