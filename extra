@@ -94,3 +94,13 @@ import
 logical
 
 export
+
+/************************************
+    State & Props in react
+************************************/
+State act like a local variable
+Props as medium to transfer between nested Component
+
+
+Component A   --------------Props----------------Component B
+State(data)                                       State(data)
