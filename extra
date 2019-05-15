@@ -104,3 +104,15 @@ Props as medium to transfer between nested Component
 
 Component A   --------------Props----------------Component B
 State(data)                                       State(data)
+
+/************************************
+    Filter in javascript
+************************************/
+
+var ages = [32, 33, 16, 40];
+
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.filter(
+  (age) => { return age >= 18; });
+}

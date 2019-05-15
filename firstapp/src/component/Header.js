@@ -14,6 +14,7 @@ class Header extends Component {
     inputdetect(event){
         //console.log(event.target.value)
         this.setState({keyword:event.target.value?event.target.value:'User Text Here'})
+        this.props.newsSearch(event.target.value)
     }
     render(){
         return(
