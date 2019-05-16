@@ -16,7 +16,15 @@ class App extends Component {
 
     filterNews(keyword){
         console.log("inside index", keyword)
+        let output=  this.state.news.filter((item) => {
+            return item.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+        })
+        this.setState({filtered: output})
     }
+
+    /*
+    ages.filter((age) => { return age >= 18; });
+    */
 
     render(){
         console.log(this.state.news)
@@ -24,7 +32,7 @@ class App extends Component {
             <div>
                 <Header newsSearch={(userSearch)=>this.filterNews(userSearch)}/>
                 <hr/>
-                <NewsList mynews={this.state.news}/>
+                <NewsList mynews={this.state.filtered}/>
             </div>
         )
     }
