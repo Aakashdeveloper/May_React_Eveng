@@ -12,6 +12,7 @@ const NewsList = (props) => {
         )
     })
 
+
     return(
         <div>
             {listnews}

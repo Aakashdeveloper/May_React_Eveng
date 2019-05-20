@@ -17,7 +17,8 @@ class App extends Component {
     filterNews(keyword){
         console.log("inside index", keyword)
         let output=  this.state.news.filter((item) => {
-            return item.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+            return (item.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1 ||
+            item.feed.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
         })
         this.setState({filtered: output})
     }

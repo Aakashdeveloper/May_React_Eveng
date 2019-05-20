@@ -116,3 +116,10 @@ function myFunction() {
   document.getElementById("demo").innerHTML = ages.filter(
   (age) => { return age >= 18; });
 }
+
+/************************************
+    Create Fake API
+************************************/
+
+npm install -g json-server
+json-server --watch db.json --port 8900
