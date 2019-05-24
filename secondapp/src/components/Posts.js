@@ -9,7 +9,7 @@ class Posts extends Component {
             <div>
                <div class="panel panel-danger">
                     <div class="panel-heading">
-                        <h2>Posts Heading</h2>
+                        <h2>Posts Heading Page</h2>
                     </div>
                     <div class="panel-body">
                         <p>
