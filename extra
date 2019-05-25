@@ -123,3 +123,8 @@ function myFunction() {
 
 npm install -g json-server
 json-server --watch db.json --port 8900
+
+
+var age = 10
+var out = "my age is "+age
+const out = `my age is ${age}`
