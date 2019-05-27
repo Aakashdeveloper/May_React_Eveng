@@ -73,11 +73,39 @@ header{
 Albums
 *======*/
 
+/**** Artist Bio ****/
+
+.artist_bio{
+    box-sizing: border-box;
+    padding:10px 30px;
+}
+
+.artist_bio .artist_image span{
+    width:130px;
+    height:130px;
+    display: block;
+    background-size: cover !important;
+    margin: 0 auto;
+}
+
+.artist_bio h3{
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.artist_bio .bio_text{
+    font-weight:100;
+    font-size:14px;
+    color:#3a3a3a;
+}
+
 .album_list{
     margin:20px;
 }
 .album_list > img{
-    float: left;
+    float:left;
     width:40%;
     margin:10px;
 }

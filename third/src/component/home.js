@@ -19,9 +19,10 @@ class Home extends Component {
             method:'GET'
         })
         .then((response) => response.json())
-        .then((data) => this.setState({
+        .success((data) => this.setState({
             artists:data
         }))
+        .catch()
     }
 
     render(){
