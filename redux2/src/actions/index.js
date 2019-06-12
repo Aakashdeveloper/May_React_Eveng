@@ -33,3 +33,43 @@ export function latestGallery(){
         }
 }
 
+
+////////////////////Get Details///////////////
+
+export function selectedNews(id){
+    const output = fetch(`${url}/articles?id=${id}`,
+                {method : 'GET'})
+        .then((response) => response.json());
+
+        return{
+            type:'GET_SELCETED_NEWS',
+            payload: output
+        }
+}
+
+export function clearselectedNews(){
+        return{
+            type:'CLEAR_SELCETED_NEWS',
+            payload: []
+        }
+}
+
+////////////////////Get Gallery Details///////////////
+
+export function selectedGallery(id){
+    const output = fetch(`${url}/galleries?id=${id}`,
+                {method : 'GET'})
+        .then((response) => response.json());
+
+        return{
+            type:'GET_SELCETED_GALLERY',
+            payload: output
+        }
+}
+
+export function clearselectedGallery(){
+        return{
+            type:'CLEAR_SELCETED_GALLERY',
+            payload: []
+        }
+}
