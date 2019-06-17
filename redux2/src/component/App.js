@@ -5,6 +5,7 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import Home from '../container/Home';
 import News from '../container/News';
 import GalleryDetails from '../container/GalleryDetail';
+import FormComponent from '../container/FormComponent';
 
 //component
 import Header from './Header';
@@ -19,6 +20,7 @@ class App extends Component {
                     <Route path="/details/:id" component={News}></Route>
                     <Route path="/gallery/:id" component={GalleryDetails}></Route>
                     <Route exact path="/" component={Home}></Route>
+                    <Route path="/form" component={FormComponent}></Route>
                     <br/>
                     <Footer/>
                 </div>

@@ -13,6 +13,12 @@ var settings = {
   };
   
 class GalleryDetails extends Component {
+    constructor(){
+        super();
+        this.state={
+            title:'Full Gallery View'
+        }
+    }
 
     componentDidMount(){
         this.props.selectedGallery(this.props.match.params.id)
@@ -24,7 +30,7 @@ class GalleryDetails extends Component {
             gallery = selected[0];
             return(
                 <div>
-                    <h3>Full Gallery View</h3>
+                    <h3>{this.state.title}</h3>
                     <Slider {...settings}>
                         {gallery.images.map((item, index) =>{
                             return(
