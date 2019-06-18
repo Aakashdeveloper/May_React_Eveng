@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import { connect} from 'react-redux';
+import { bindActionCreators} from 'redux';
+import { postData } from '../actions';
+import { browserHistory} from 'react-router-dom';
 
 
 class FormComponent extends Component {
@@ -24,8 +28,9 @@ class FormComponent extends Component {
     }
 
     handleSubmit(event){
-        var a = 'fname>'+this.state.fname+'lname>'+this.state.lname
-        alert(a)
+        this.props.postData(this.state.fname, this.state.lname);
+        alert('data submitted');
+        this.props.history.push('/');
     }
     render(){
         return(
@@ -59,4 +64,9 @@ class FormComponent extends Component {
     }
 }
 
-export default FormComponent;
+
+function mapDisptachToProps(dispatch){
+    return bindActionCreators({postData}, dispatch)
+}
+
+export default connect(null, mapDisptachToProps)(FormComponent);
