@@ -146,3 +146,7 @@ function add(){
     return 10
 }
 add()
+
+
+
+npm i react-router-dom react-redux redux redux-thunk axios
