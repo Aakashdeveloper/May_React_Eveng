@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const ListView = () => {
-    return(
-        <h1>List View</h1>
-    )
+
+class ListView extends React.PureComponent{
+    componentDidMount(){
+        this.props.fetchProperty()
+    }
+
+    render(){
+
+        return(
+            <h1>Property</h1>
+        )
+    }
 }
 
 export default ListView;
