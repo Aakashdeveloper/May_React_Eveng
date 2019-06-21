@@ -1,21 +1,20 @@
-import {getPropertyData} from './propertySearch';
+import {getPropertyData,getPropertyDetail} from './propertySearch';
 
-export function openHouseData(response){
-    return {type:'GET_OPENHOUSE_DATA', payload:response}
+export function openHouseData(response) {
+    return {type: 'GET_OPENHOUSES_DATA', payload: response };
 }
 
-const getPropertyList = () => async(dispatch) =>{
-    try{
+const getPropertyList = () => async (dispatch) => {
+    try {
         const response = await getPropertyData();
-            dispatch(openHouseData(response))
+        dispatch(openHouseData(response));
+    } catch(error) {
+        dispatch(openHouseData([]));
     }
-    catch(err){
-        dispatch(openHouseData([]))
-    }
-}
+};
 
 
 export const fetchProperty = {
     openHouseData,
     getPropertyList
-}
+};

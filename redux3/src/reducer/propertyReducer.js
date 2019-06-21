@@ -1,8 +1,12 @@
-export default function(state = [], action){
-    switch(action.type){
-        case 'GET_OPENHOUSE_DATA':
-            return{...state, data:action.payload}
+const defaultState = {
+    data: [],
+};
+
+export default function(state = defaultState, action) {
+    switch (action.type) {
+        case 'GET_OPENHOUSES_DATA':
+            return {...state, data: action.payload };
         default:
-            return state;
+            return state;        
     }
 }

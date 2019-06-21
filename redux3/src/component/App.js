@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
 
-import ListView from './ListView';
+import ListView from '../container/ListView';
 import PropertDetails from './PropertyDetail';
 
 class App extends Component {
