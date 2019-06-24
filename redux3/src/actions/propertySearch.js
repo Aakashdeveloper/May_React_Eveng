@@ -21,3 +21,23 @@ export function getPropertyData(){
     return request
 
 }
+
+export function getPropertyDetail(id){
+    const config = {
+        url: `${API.API_LINK}/${id}`,
+        method: 'GET',
+        headers: {
+            'Authorization': 'Basic c2ltcGx5cmV0czpzaW1wbHlyZXRz',
+            'Content-Type': 'application/json'
+        }
+    };
+
+
+    var request = axios.request(config)
+        .then((response)  => {
+            return response.data;  
+        });
+
+    return request
+
+}

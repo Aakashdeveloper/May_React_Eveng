@@ -4,6 +4,10 @@ export function openHouseData(response) {
     return {type: 'GET_OPENHOUSES_DATA', payload: response };
 }
 
+export function openHouseDetails(response) {
+    return {type: 'GET_OPENHOUSES_DETAILS', payload: response };
+}
+
 const getPropertyList = () => async (dispatch) => {
     try {
         const response = await getPropertyData();
@@ -13,8 +17,18 @@ const getPropertyList = () => async (dispatch) => {
     }
 };
 
+const getPropertyDetails = (id) => async (dispatch) => {
+    try {
+        const response = await getPropertyDetail(id);
+        dispatch(openHouseDetails(response));
+    } catch(error) {
+        dispatch(openHouseDetails([]));
+    }
+};
 
 export const fetchProperty = {
     openHouseData,
-    getPropertyList
+    getPropertyList,
+    openHouseDetails,
+    getPropertyDetails
 };

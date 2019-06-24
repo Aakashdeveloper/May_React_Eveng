@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
 
 import ListView from '../container/ListView';
-import PropertDetails from './PropertyDetail';
+import PropertDetail from '../container/PropertyDetail';
 
 class App extends Component {
     render(){
@@ -10,7 +10,7 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Route exact path="/" component={ListView}></Route>
-                    <Route exact path="/porperty/:id" component={PropertDetails}></Route>
+                    <Route exact path="/openhouse/:id" component={PropertDetail}></Route>
                 </div>
             </BrowserRouter>
         )
